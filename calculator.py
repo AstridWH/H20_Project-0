@@ -17,6 +17,12 @@ def Sin(x, N):
 
 def divide(x, y):
     return x/y
+
+def Cos(x, N):
+    s = 0
+    for n in range(0, N):
+        s += (((-1)**n)*(x**(2*n)))/(Factorial(2*n))
+    return s
     
 
 k = add(3, 5)
@@ -35,3 +41,7 @@ from math import sin
 print(sin(pi/2))
 
 print(divide(20, 5))
+
+print(Cos(pi/4, 85))
+from math import cos
+print(cos(pi/4))

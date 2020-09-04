@@ -1,5 +1,7 @@
-from calculator import add, Factorial, Sin, divide
+from calculator import add, Factorial, Sin, divide, Cos
 import math as math
+
+tol = 1e-13
 
 def test_add(a=1, b=2):
     n = add(a, b)
@@ -9,7 +11,7 @@ def test_add(a=1, b=2):
 def test_add_float(a=0.1, b=0.2):
     #print(add(a,b))
     #print(a+b)
-    return abs((add(a,b)) - (a+b)) < 1e-13
+    return abs((add(a,b)) - (a+b)) < tol
 
 def test_add_string(a = 'Hello', b = 'World'):
     n = add(a, b)
@@ -19,19 +21,22 @@ def test_add_string(a = 'Hello', b = 'World'):
 def test_factorial(k = 10):
     n = Factorial(k)
     m = math.factorial(k)
-    return abs(n-m) < 1e13
+    return abs(n-m) < tol
 
 def test_sin(x=math.pi/2, N=85):
     u = math.sin(x)
     v = Sin(x, N)
-    return abs(u-v) < 1e13
+    return abs(u-v) < tol
     
 def test_divide(x=34926, y=5821):
     u = x/y
     v = divide(x, y)
-    print(u)
-    print(v)
     return u == v
+
+def test_cos(x=math.pi/4, N=85):
+    u = math.cos(x)
+    v = Cos(x, N)
+    return abs(u - v) < tol
 
 
 print('1')    
@@ -46,3 +51,4 @@ print('4')
 print(test_factorial())
 print(test_sin())
 print(test_divide())
+print(test_cos())
