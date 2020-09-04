@@ -1,4 +1,4 @@
-from calculator import add, Factorial, Sin
+from calculator import add, Factorial, Sin, divide
 import math as math
 
 def test_add(a=1, b=2):
@@ -26,9 +26,12 @@ def test_sin(x=math.pi/2, N=85):
     v = Sin(x, N)
     return abs(u-v) < 1e13
     
-
-
-
+def test_divide(x=34926, y=5821):
+    u = x/y
+    v = divide(x, y)
+    print(u)
+    print(v)
+    return u == v
 
 
 print('1')    
@@ -42,3 +45,4 @@ print(test_add('Hello', 'World'))
 print('4')
 print(test_factorial())
 print(test_sin())
+print(test_divide())

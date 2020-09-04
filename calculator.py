@@ -15,6 +15,10 @@ def Sin(x, N):
         s += (((-1)**n)*(x**(2*n + 1)))/(Factorial(2*n+1))
     return s
 
+def divide(x, y):
+    return x/y
+    
+
 k = add(3, 5)
 print(k)
     
@@ -29,3 +33,5 @@ print(Sin(pi/2, 85))
 
 from math import sin 
 print(sin(pi/2))
+
+print(divide(20, 5))
