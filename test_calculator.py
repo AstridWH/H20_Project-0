@@ -10,8 +10,16 @@ def test_add_float(a=0.1, b=0.2):
     #print(a+b)
     return abs((add(a,b)) - (a+b)) < 1e-5
 
-    
+def test_add_string(a = 'Hello', b = 'World'):
+    n = add(a, b)
+    m = a + b
+    return n == m 
+
+print('1')    
 print(test_add())
+print('2')
 print(test_add(0.1, 0.2))   #Samme resultat som add_float
 print(test_add_float())
-
+print('3')
+print(test_add_string())
+print(test_add('Hello', 'World'))
