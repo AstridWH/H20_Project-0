@@ -21,3 +21,8 @@
 	a branch called help while trying to 
 	figure out how to move from in-progress
 	to master)
+	Update: I've gotten to master, but when 
+	trying to pytest "Permission denied" comes 
+	up.
+- Just looked at github. Looks like it hasn't 
+	registered master as a branch. Great. 
