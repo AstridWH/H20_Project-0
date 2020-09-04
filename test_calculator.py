@@ -1,4 +1,4 @@
-from calculator import add, Factorial
+from calculator import add, Factorial, Sin
 import math as math
 
 def test_add(a=1, b=2):
@@ -21,6 +21,12 @@ def test_factorial(k = 10):
     m = math.factorial(k)
     return abs(n-m) < 1e13
 
+def test_sin(x=math.pi/2, N=85):
+    u = math.sin(x)
+    v = Sin(x, N)
+    return abs(u-v) < 1e13
+    
+
 
 
 
@@ -35,3 +41,4 @@ print(test_add_string())
 print(test_add('Hello', 'World'))
 print('4')
 print(test_factorial())
+print(test_sin())

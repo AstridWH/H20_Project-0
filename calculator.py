@@ -9,11 +9,23 @@ def Factorial(n):
         s = s*i
     return s
 
-#k = add(3, 5)
-#print(k)
+def Sin(x, N):
+    s = 0
+    for n in range(0, N):
+        s += (((-1)**n)*(x**(2*n + 1)))/(Factorial(2*n+1))
+    return s
+
+k = add(3, 5)
+print(k)
     
 j = Factorial(10)
 print(j)
 
 from math import factorial
 print(factorial(10))
+
+from math import pi
+print(Sin(pi/2, 85))
+
+from math import sin 
+print(sin(pi/2))
