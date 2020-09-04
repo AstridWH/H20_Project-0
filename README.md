@@ -12,3 +12,12 @@
 	And accidentally found 5821 as a prime
 	number. I know this isn't relevant, but
 	it made me happy. 
+
+- Exercise 5: My biggest problem with this whole 
+	thing is git and pytest. I've been coding
+	in spyder, so I have very little experience
+	with teminals, and I just can't get it to
+	do what I want to to do. (eks, I created
+	a branch called help while trying to 
+	figure out how to move from in-progress
+	to master)
