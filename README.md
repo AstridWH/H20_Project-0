@@ -27,4 +27,5 @@
 - Just looked at github. Looks like it hasn't 
 	registered master as a branch. Great. 
 - Change to see if pytest finally decides to work. 
-	It didn't.
+	It didn't. Apparantly this is a known 
+	windows 10 issue... 
