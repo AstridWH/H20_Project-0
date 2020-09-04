@@ -24,6 +24,8 @@ def Cos(x, N):
         s += (((-1)**n)*(x**(2*n)))/(Factorial(2*n))
     return s
     
+def Tan(x, N):
+    return (Sin(x, N)/Cos(x, N))
 
 k = add(3, 5)
 print(k)
@@ -45,3 +47,7 @@ print(divide(20, 5))
 print(Cos(pi/4, 85))
 from math import cos
 print(cos(pi/4))
+
+print(Tan(pi/4, 85))
+from math import tan
+print(tan(pi/4))

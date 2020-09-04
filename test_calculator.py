@@ -1,4 +1,4 @@
-from calculator import add, Factorial, Sin, divide, Cos
+from calculator import add, Factorial, Sin, divide, Cos, Tan
 import math as math
 
 tol = 1e-13
@@ -38,6 +38,11 @@ def test_cos(x=math.pi/4, N=85):
     v = Cos(x, N)
     return abs(u - v) < tol
 
+def test_tan(x=math.pi/4, N=85):
+    u = math.tan(x)
+    v = Tan(x, N)
+    return abs(v - u) < tol
+
 
 print('1')    
 print(test_add())
@@ -52,3 +57,4 @@ print(test_factorial())
 print(test_sin())
 print(test_divide())
 print(test_cos())
+print(test_tan())
