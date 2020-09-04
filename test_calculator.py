@@ -1,5 +1,6 @@
 from calculator import add, Factorial, Sin, divide, Cos, Tan
 import math as math
+import pytest
 
 tol = 1e-13
 
@@ -7,6 +8,10 @@ def test_add(a=1, b=2):
     n = add(a, b)
     m = a + b
     return n == m 
+
+def add_number_and_string(a=1, b= 'hello'):
+    with pytest.raises(TypeError):
+        add(a,b)
     
 def test_add_float(a=0.1, b=0.2):
     #print(add(a,b))
@@ -58,3 +63,5 @@ print(test_sin())
 print(test_divide())
 print(test_cos())
 print(test_tan())
+print('5')
+print(add_number_and_string())
