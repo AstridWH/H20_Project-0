@@ -16,9 +16,9 @@ def test_add_string(a = 'Hello', b = 'World'):
     m = a + b
     return n == m 
 
-def test_factorial(n = 10):
-    n = Factorial(n)
-    m = math.factorial(n)
+def test_factorial(k = 10):
+    n = Factorial(k)
+    m = math.factorial(k)
     return abs(n-m) < 1e13
 
 
