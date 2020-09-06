@@ -9,7 +9,7 @@ def test_add_Exercise_1(a=1, b=2):
     control = a + b
     assert from_add == control
 
-def add_number_and_string_Exercise_5(a=1, b= 'hello'):
+def test_add_number_and_string_Exercise_5(a=1, b= 'hello'):
     with pytest.raises(TypeError):
         add(a,b)
 
