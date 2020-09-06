@@ -4,13 +4,6 @@ import pytest
 
 tol = 1e-13
 
-@pytest.mark.parametrize("a, b", [((1,2),3), ((3,4),7), ((10,7),17)])
-def test_add_para(a,b):
-    s=0
-    for i in len(a):
-        s+=i
-    return s == b
-
 def test_add(a=1, b=2):
     n = add(a, b)
     m = a + b
@@ -30,15 +23,29 @@ def test_add_string(a = 'Hello', b = 'World'):
     m = a + b
     return n == m 
 
+@pytest.mark.parametrize("a, b", [((1.0,2.0),3.0), ((3.0,4),7), ((10,7),17), ("Hello", "World"), "Hello World"])
+def test_add_para_int_float_str(a,b):
+    s = add(a[0], a[1])
+    assert s == b
+
 def test_factorial(k = 10):
     n = Factorial(k)
     m = math.factorial(k)
     return abs(n-m) < tol
 
+@pytest.mark.parametrize("a, b", [(2,2), (3, 6), (10, 3628800)])
+def test_factorial_para(a, b):
+    assert Factorial(a) == b
+
 def test_sin(x=math.pi/2, N=85):
     u = math.sin(x)
     v = Sin(x, N)
     return abs(u-v) < tol
+
+@pytest.mark.parametrize("a, b", [((0, 85), 0), ((math.pi/6, 85), 1/2), ((math.pi/2, 85), 1), ((3*math.pi/2, 85), -1)])
+def test_sin_para(a, b):
+    u = Sin(a[0], a[1])
+    assert abs(u-b) < tol
     
 def test_divide(x=34926, y=5821):
     u = x/y
@@ -48,6 +55,8 @@ def test_divide(x=34926, y=5821):
 def test_divide_by_zero(x = 1, y = 0):
     with pytest.raises(ZeroDivisionError):
         divide(x,y)
+
+
 
 def test_cos(x=math.pi/4, N=85):
     u = math.cos(x)
