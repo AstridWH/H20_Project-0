@@ -66,6 +66,12 @@ def test_cos(x=math.pi/4, N=85):
     v = Cos(x, N)
     return abs(u - v) < tol
 
+@pytest.mark.parametrize("a, b", [((0, 85), 1), ((math.pi/3, 85), 1/2), ((math.pi/2, 85), 0), ((math.pi, 85), -1)])
+def test_cos_para(a,b):
+    u = Cos(a[0], a[1])
+    assert abs(u-b) < tol
+
+
 def test_tan(x=math.pi/4, N=85):
     u = math.tan(x)
     v = Tan(x, N)
