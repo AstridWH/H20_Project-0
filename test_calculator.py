@@ -77,6 +77,11 @@ def test_tan(x=math.pi/4, N=85):
     v = Tan(x, N)
     return abs(v - u) < tol
 
+@pytest.mark.paramertize("a,b", [((0, 85), 0), ((math.pi/4, 85), 1), ((math.pi, 85), 0)])
+def test_tan_para(a,b):
+    u = Tan(a[0], a[1])
+    assert abs(u-b) < tol 
+    
 
 print('1')    
 print(test_add())
