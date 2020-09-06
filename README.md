@@ -26,3 +26,6 @@
 	up.
 - Just looked at github. Looks like it hasn't 
 	registered master as a branch. Great. 
+
+- It's two days and multiple hours of trying to fix
+	pytest later. No progress.
