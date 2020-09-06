@@ -56,7 +56,10 @@ def test_divide_by_zero(x = 1, y = 0):
     with pytest.raises(ZeroDivisionError):
         divide(x,y)
 
-
+@pytest.mark.parametrize("a,b", [((4, 2), 2), ((14, 7), 2), ((81, 3), 27)])
+def test_divide_para(a, b):
+    u = divide(a[0], a[1])
+    assert u == b
 
 def test_cos(x=math.pi/4, N=85):
     u = math.cos(x)
