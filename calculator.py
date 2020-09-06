@@ -1,5 +1,3 @@
-
-
 def add(x, y):
     return x + y
 
@@ -26,28 +24,3 @@ def Cos(x, N):
     
 def Tan(x, N):
     return (Sin(x, N)/Cos(x, N))
-
-k = add(3, 5)
-print(k)
-    
-j = Factorial(10)
-print(j)
-
-from math import factorial
-print(factorial(10))
-
-from math import pi
-print(Sin(pi/2, 85))
-
-from math import sin 
-print(sin(pi/2))
-
-print(divide(20, 5))
-
-print(Cos(pi/4, 85))
-from math import cos
-print(cos(pi/4))
-
-print(Tan(pi/4, 85))
-from math import tan
-print(tan(pi/4))

@@ -29,3 +29,6 @@
 
 - It's two days and multiple hours of trying to fix
 	pytest later. No progress.
+
+- I've pretty much given up. I'm just writing stuff
+	And hope it works.
