@@ -4,6 +4,13 @@ import pytest
 
 tol = 1e-13
 
+@pytest.mark.parametrize("a, b", [((1,2),3), ((3,4),7), ((10,7),17)])
+def test_add_para(a,b):
+    s=0
+    for i in len(a):
+        s+=i
+    return s == b
+
 def test_add(a=1, b=2):
     n = add(a, b)
     m = a + b
@@ -38,6 +45,10 @@ def test_divide(x=34926, y=5821):
     v = divide(x, y)
     return u == v
 
+def test_divide_by_zero(x = 1, y = 0):
+    with pytest.raises(ZeroDivisionError):
+        divide(x,y)
+
 def test_cos(x=math.pi/4, N=85):
     u = math.cos(x)
     v = Cos(x, N)
@@ -65,3 +76,6 @@ print(test_cos())
 print(test_tan())
 print('5')
 print(add_number_and_string())
+
+print('6')
+print(test_add_para())
